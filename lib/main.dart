@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui_test/screens/home.s.dart';
 
 void main() {
   runApp(const UITestApp());
@@ -12,7 +13,10 @@ class UITestApp extends StatelessWidget {
     return MaterialApp(
       title: "Flutter UI Test App",
       theme: ThemeData(
-        primarySwatch: Colors.lightGreen,
+        primarySwatch: Colors.green,
+      ),
+      home: const HomeScreen(
+        title: "Flutter UI Test App",
       ),
     );
   }
