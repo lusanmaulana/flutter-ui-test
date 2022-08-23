@@ -5,6 +5,11 @@ class Strings {
   static const mcTitle = "MobiCash";
   static const signUp = "Sign Up";
   static const signIn = "Sign In";
+  static const intros = <Map<String, String>>[
+    {"title": "Pay everything", "message": "Pay easily for utilities. Just\nscan the qr code"},
+    {"title": "Send money", "message": "Smart payment make\nsmart lifestyle"},
+    {"title": "Let's go!", "message": "Pay easily anytime\nanywhere"},
+  ];
 }
 
 class FontFamily {

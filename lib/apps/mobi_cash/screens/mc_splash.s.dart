@@ -16,34 +16,43 @@ class MCSplashScreen extends StatelessWidget {
       },
       child: Scaffold(
         backgroundColor: MCColors.background,
-        body: Padding(
-          padding: const EdgeInsets.all(32).copyWith(top: 150),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: const [
-              Text.rich(TextSpan(
-                text: "${Strings.mcTitle}\n\n",
-                style: TextStyle(
-                  fontSize: 48,
-                  fontWeight: FontWeight.w900,
-                ),
-                children: [
-                  TextSpan(
-                    text: "Mobile payment service for\ngoods and services",
+        body: Stack(
+          fit: StackFit.expand,
+          children: [
+            Image.asset(
+              "assets/images/mc_splash_background.jpg",
+              fit: BoxFit.cover,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(32).copyWith(top: 150, bottom: 48),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: const [
+                  Text.rich(TextSpan(
+                    text: "${Strings.mcTitle}\n\n",
                     style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.normal,
+                      fontSize: 48,
+                      fontWeight: FontWeight.w900,
                     ),
+                    children: [
+                      TextSpan(
+                        text: "Mobile payment service for\ngoods and services",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.normal,
+                        ),
+                      ),
+                    ],
+                  )),
+                  Text(
+                    "Copyright 2019 Compass Plus Ltd.\nAll rights reserved",
+                    textAlign: TextAlign.center,
                   ),
                 ],
-              )),
-              Text(
-                "Copyright 2019 Compass Plus Ltd.\nAll rights reserved",
-                textAlign: TextAlign.center,
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
