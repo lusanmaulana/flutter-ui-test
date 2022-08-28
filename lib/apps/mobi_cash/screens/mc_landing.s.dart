@@ -48,7 +48,7 @@ class _MCLandingScreenState extends State<MCLandingScreen> with SingleTickerProv
               borderStyle: BorderStyle.none,
             ),
           ),
-          const SizedBox(height: 32,),
+          const SizedBox(height: 32),
           Padding(
             padding: const EdgeInsets.all(16).copyWith(bottom: 64),
             child: Column(
@@ -95,31 +95,29 @@ class _MCLandingScreenState extends State<MCLandingScreen> with SingleTickerProv
 
   Widget _buildIntroWidget(BuildContext context, int index) {
     final intro = Strings.intros[index];
-    return Expanded(
-      child: Padding(
-        padding: const EdgeInsets.all(32),
-        child: Column(
-          children: [
-            const Spacer(),
-            Text(
-              intro["title"]!,
-              style: const TextStyle(
-                fontSize: 40,
-                fontWeight: FontWeight.w500,
-              ),
+    return Padding(
+      padding: const EdgeInsets.all(32),
+      child: Column(
+        children: [
+          const Spacer(),
+          Text(
+            intro["title"]!,
+            style: const TextStyle(
+              fontSize: 40,
+              fontWeight: FontWeight.w500,
             ),
-            const SizedBox(height: 16),
-            Text(
-              intro["message"]!,
-              textAlign: TextAlign.center,
-              style: const TextStyle(
-                color: MCColors.grey,
-                fontSize: 20,
-                fontWeight: FontWeight.w500,
-              ),
+          ),
+          const SizedBox(height: 16),
+          Text(
+            intro["message"]!,
+            textAlign: TextAlign.center,
+            style: const TextStyle(
+              color: MCColors.grey,
+              fontSize: 20,
+              fontWeight: FontWeight.w500,
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
