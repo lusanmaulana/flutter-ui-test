@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui_test/apps/mobi_cash/screens/mc_sign_up.s.dart';
 import 'package:flutter_ui_test/cores/const_helper.dart';
 
 class MCLandingScreen extends StatefulWidget {
@@ -21,6 +22,12 @@ class _MCLandingScreenState extends State<MCLandingScreen> with SingleTickerProv
 
   void _onPageChanged(int index) {
     _tabController.animateTo(index);
+  }
+
+  void _goToSignUpScreen() {
+    Navigator.of(context).push(MaterialPageRoute(
+      builder: (context) => const SignUpScreen(),
+    ));
   }
 
   @override
@@ -55,7 +62,7 @@ class _MCLandingScreenState extends State<MCLandingScreen> with SingleTickerProv
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 TextButton(
-                  onPressed: () {},
+                  onPressed: _goToSignUpScreen,
                   style: TextButton.styleFrom(
                     primary: Colors.white,
                     backgroundColor: MCColors.blue,
