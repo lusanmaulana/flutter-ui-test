@@ -3,7 +3,7 @@ import 'package:flutter_ui_test/apps/mobi_cash/screens/mc_sign_up.s.dart';
 import 'package:flutter_ui_test/cores/const_helper.dart';
 
 class MCLandingScreen extends StatefulWidget {
-  const MCLandingScreen({Key? key}) : super(key: key);
+  const MCLandingScreen({super.key});
 
   @override
   State<MCLandingScreen> createState() => _MCLandingScreenState();
@@ -64,7 +64,7 @@ class _MCLandingScreenState extends State<MCLandingScreen> with SingleTickerProv
                 TextButton(
                   onPressed: _goToSignUpScreen,
                   style: TextButton.styleFrom(
-                    primary: Colors.white,
+                    foregroundColor: Colors.white,
                     backgroundColor: MCColors.blue,
                     padding: const EdgeInsets.symmetric(vertical: 16),
                     shape: RoundedRectangleBorder(

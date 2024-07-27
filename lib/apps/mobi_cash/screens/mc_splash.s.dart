@@ -25,10 +25,10 @@ class MCSplashScreen extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.all(32).copyWith(top: 150, bottom: 48),
-              child: Column(
+              child: const Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: const [
+                children: [
                   Text.rich(TextSpan(
                     text: "${Strings.mcTitle}\n\n",
                     style: TextStyle(
